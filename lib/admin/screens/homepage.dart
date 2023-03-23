@@ -20,7 +20,25 @@ class _HomePageState extends State<HomePage> {
         backgroundColor: Color(0xFF2C384A),
         title: AppBarTitle(sectionName: 'Halaman Utama'),
       ),
-      floatingActionButton: FloatingActionButton(onPressed: () => Navigator.push(context, MaterialPageRoute(builder: (context)=>QuestionAdd())),),
+      body: Column(
+        children: [
+          ElevatedButton(
+            onPressed: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => QuestionAdd(),
+                ),
+              );
+            },
+            child: Text('Bank Soal'),
+          )
+        ],
+      ),
+      floatingActionButton: FloatingActionButton(
+        onPressed: () => Navigator.push(
+            context, MaterialPageRoute(builder: (context) => QuestionAdd())),
+      ),
     );
   }
 }

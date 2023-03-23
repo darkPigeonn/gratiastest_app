@@ -11,16 +11,18 @@ class QuestionAdd extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
-      onTap: (){},
+      onTap: () {},
       child: Scaffold(
-        backgroundColor: Color(0xFF2C384A),
         appBar: AppBar(
           elevation: 0,
           backgroundColor: Color(0xFF2C384A),
           title: AppBarTitle(sectionName: 'CRUD'),
         ),
-        body: SafeArea(child: Padding(padding: EdgeInsets.only(left: 16, right: 16, bottom: 20),
-        child: FormQuestion()),),
+        body: SafeArea(
+          child: Padding(
+              padding: EdgeInsets.only(left: 16, right: 16, bottom: 20),
+              child: FormQuestion()),
+        ),
       ),
     );
   }

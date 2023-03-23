@@ -1,18 +1,19 @@
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
+import 'package:gratiastest_app/admin/screens/questions.dart';
 
 import 'admin/screens/homepage.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await Firebase.initializeApp(
-    options:  FirebaseOptions(
-      apiKey: "AIzaSyD-5fBnuPr_K7oEDOrMd80_WSmNbhRrbB8",
-      projectId: "gratias-test",
-      messagingSenderId: "868290605639",
-      appId: "1:868290605639:web:28b1b3b9c7c0160915f762",
-      )
-  );
+      options: FirebaseOptions(
+    apiKey: "AIzaSyD-5fBnuPr_K7oEDOrMd80_WSmNbhRrbB8",
+    projectId: "gratias-test",
+    messagingSenderId: "868290605639",
+    appId: "1:868290605639:web:28b1b3b9c7c0160915f762",
+  ));
+
   runApp(const MyApp());
 }
 
@@ -36,7 +37,7 @@ class MyApp extends StatelessWidget {
         // is not restarted.
         primarySwatch: Colors.blue,
       ),
-      home: HomePage(),
+      home: QuestionAdd(),
     );
   }
 }
